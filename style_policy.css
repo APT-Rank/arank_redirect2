@@ -1,0 +1,87 @@
+  :root {
+   --doc-height: 100%;
+  }
+    
+  body{
+    -ms-overflow-style: none;
+    /*min-height: 100vh;
+    min-height: -webkit-fill-available;*/ 
+    height: 100vh;
+    height: var(--doc-height);
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+  #container{
+    margin-top: constant(safe-area-inset-top);
+    margin-top: env(safe-area-inset-top);
+    margin-bottom: constant(safe-area-inset-bottom);
+    margin-bottom: env(safe-area-inset-bottom);  
+  }
+  #titleBar{
+    position: fixed;
+    display: grid;
+    grid-template-columns: 1fr;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 51px;    
+    text-align: center;
+    line-height: 50px;
+    background-color: #e31939;
+    z-index: 500;
+  }
+  #title{    
+    color: white;
+    font-size: 1.25em;
+    font-weight: 600;    
+  }
+
+  #PolicyContent{
+    display:block;
+    width: 100%;
+  }
+
+  .Lv01{
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: 600;
+  }
+  .Lv02{   
+    font-size: 1.1em;
+    font-weight: 600;
+  }
+  #PolicyContent > div{
+    margin-left: 17px;    
+    text-indent: -17px;
+    line-height: 2.4em;
+  }
+  .sub_indent{
+    margin-left: 38px !important;
+    text-indent: -21px !important;
+  }
+
+  @media screen and (min-width: 800px){
+    body.modal-open {
+      overflow: visible !important;      
+      padding-right: 0px !important;      
+    }
+    ::-webkit-scrollbar {
+      display: 3px;
+    }   
+    #modal .modalWindow{      
+      width: 700px;
+    }
+    #close{
+      width: 700px;
+    }
+    #centerBox{
+      width: 100%;
+      display: grid;
+      grid-template-columns: 800px;
+      justify-content:center;
+    }
+    #titleBar, #titleBar_theme{
+      margin: 0 auto;
+      width: 800px;
+    }
+  }  
